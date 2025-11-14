@@ -15,6 +15,12 @@ p {
     line-height: 1.5;
 }
 
+.container {
+    max-width: 1000px;
+    width: 100vw;
+    margin: 0 auto;
+    padding: 80px 0px;
+}
 .row {
     width: 100%;
     max-width: 1200px;
@@ -26,20 +32,11 @@ img {
     height: 100%;
 }
 
-.container {
-    max-width: 1000px;
-    width: 100vw;
-    margin: 0 auto;
-    padding: 80px 0;
-}
 
 body {
     min-height: 100vw;
     overflow-x: hidden;
 }
-
-
-
 
 h1, h2, h3, h4, h5, h6, span {
     color: #242424;
@@ -49,10 +46,20 @@ h1, h2, h3, h4, h5, h6, span {
 
 
 
-/*                     */
-.book-card {
-    padding: 2px 16px;
-    border-radius: 1px black;
-    background-color: lightgrey;
+/*         BOOK INFO BUBBLES            */
 
+.book-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.book-card {
+    padding: 20px;
+    background-color: lightgreen;
+    border-radius: 20px;
+    border-color: black;
+    border: 1px solid;
+    max-width: 300px;
+    margin: 10px;
 }
