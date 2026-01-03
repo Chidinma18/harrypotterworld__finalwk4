@@ -5,10 +5,11 @@ async function main() {
     const books = await fetch("https://potterhead-api.vercel.app/api/books");
     const booksData = await books.json();
 
-    const userListEl = document.querySelector(".book-list");
-    userListEl.innerHTML = booksData
+    const bookListEl = document.querySelector(".book-list");
+    console.log(booksData);
+    bookListEl.innerHTML = booksData
         .map(
-            (books) => `<div class="book-card">
+            (book) => `<div class="book-card">
         <div class="book-card__container">
             <h3>Title</h3>
             <p><b>Cover</b><img src="https://website.website" alt=""></a></p>
@@ -18,7 +19,8 @@ async function main() {
             <h5><b>Wiki: </b> <a href="https://website.website" target="_blank"></a>website</h5>
         </div>
     </div>`
-    ).join("");
+    )
+    .join("");
 }
 
 
