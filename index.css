@@ -44,6 +44,13 @@ h1, h2, h3, h4, h5, h6, span {
     line-height: 1.25;
 }
 
+h3 {
+    padding-bottom: 10px;
+}
+
+h5 {
+    padding-bottom: 5px;
+}
 
 
 /*         BOOK INFO BUBBLES            */
@@ -77,4 +84,5 @@ h1, h2, h3, h4, h5, h6, span {
 .book-card__container {
     padding: 2px 16px;
 }
+
 
