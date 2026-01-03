@@ -4,19 +4,19 @@
 async function main() {
     const books = await fetch("https://potterhead-api.vercel.app/api/books");
     const booksData = await books.json();
-
     const bookListEl = document.querySelector(".book-list");
     console.log(booksData);
+
     bookListEl.innerHTML = booksData
         .map(
             (book) => `<div class="book-card">
         <div class="book-card__container">
-            <h3>Title</h3>
-            <p><b>Cover</b><img src="https://website.website" alt=""></a></p>
-            <h5><b>Summary: </b>" "</h5>
-            <h5><b>Release Date: </b>" "</h5>
-            <h5><b>Pages: </b>0-000</h5>
-            <h5><b>Wiki: </b> <a href="https://website.website" target="_blank"></a>website</h5>
+            <h3> ${book.title} </h3>
+            <p><b>Cover</b> <img src="${book.cover} alt=""></a> </p>
+            <h5><b>Summary: </b> ${book.summary} </h5>
+            <h5><b>Release Date: </b>" ${book.release_date} "</h5>
+            <h5><b>Pages: </b> ${book.pages} </h5>
+            <h5><b>Wiki: </b> <a href=" ${book.wiki} " target="_blank"> ${book.wiki} </a></h5>
         </div>
     </div>`
     )
